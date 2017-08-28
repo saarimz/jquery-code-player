@@ -15,10 +15,9 @@
 		<link rel="stylesheet" href="styles/styles.css">
 	</head>
 	<body>
-		<div class="container">
-			<div class="row text-center">
-				<div class="col-md-12">
-					<div class="selectors" id="html">
+
+	<!--<div class="selectors">
+					<div id="html">
 						<p>HTML</p>
 					</div>
 					<div class="selectors" id="css">
@@ -30,6 +29,18 @@
 					<div class="selectors" id="preview">
 						<p>Preview</p>
 					</div>	
+				  </div>-->
+		<div class="container-fluid">
+			<div class="row text-center header">
+				<div class="col-md-12">
+				  <div id="wrapper">
+					  <ul id="horizontal-list">
+					  	<li id="html">HTML</li>
+					  	<li id="css">CSS</li>
+					  	<li id="js">JavaScript</li>
+					  	<li id="preview">Preview</li>
+					  </ul>
+				  </div>
 				</div>
 			</div>
 		</div>
@@ -37,28 +48,27 @@
 			<table class="code-table">
 				<tr>
 					<td class="panel" id="html-column">
-						<div style="height: 100%">
+						<div>
 							<h3 class="panel-header">HTML</h3>
-							<textarea id="html-input" rows="100"></textarea> 
+							<textarea id="html-input"></textarea> 
 						</div>
 					</td>
 					<td class="panel" id="css-column">
-						<div style="height: 100%">
+						<div>
 							<h3 class="panel-header">CSS</h3>
 							<textarea id="css-input"></textarea> 
 						</div>
 					</td>
 					<td class="panel" id="js-column">
-						<div style="height: 100%">
+						<div>
 							<h3 class="panel-header">JavaScript</h3>
 							<textarea id="js-input"></textarea> 
 						</div>
 					</td>
 					<td class="panel" id="preview-column">
-						<div style="height: 100%">
+						<div>
 							<h3 class="panel-header">Preview</h3>
 							<iframe id="panel-out"></iframe>
-								
 							</div> 
 						</div>
 					</td>
