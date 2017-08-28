@@ -9,18 +9,10 @@
 
 			}
 
-			textarea {
-				margin: 0;
-    			padding: 0;
-    			border: 0;
-    			font-size: 100%;
-    			font: inherit;
-    			vertical-align: baseline;
-			}
+			/*header styles*/
 
 			.header{
 				padding-bottom: 20px;
-				text-align: center;
 				background-color: #141414;
 
 			}
@@ -29,7 +21,7 @@
 				min-width: 696px;
 				list-style: none;
 				padding-top: 20px;
-				}
+			}
 
 			#horizontal-list li {
 				border: 2px solid #EEC643;
@@ -42,7 +34,7 @@
 				display: inline;
 			}
 
-			#horizontal-list li:hover{
+			#horizontal-list li:hover {
 				background-color: #EEC643;
 				color: #141414;
 				border-color: #EEF0F2;
@@ -54,61 +46,64 @@
 				display: inline-block;
 			}
 
-			.selector-container {
-				border: 1px solid black;
+			/*code area styles*/
+
+			#content textarea  {
+
+				font-family: monospace;
+				background-color: #EEF0F2;
+				border-top: 2px solid #EEC643;
 				margin: 0 auto;
+				padding: 0 5px;
+				font-size: 100%;
+    			font: inherit;
+    			vertical-align: baseline; 
+				/*
+				margin: 0;
+    			padding: 0;
+    			border: 0;
+    			font-size: 100%;
+    			font: inherit;
+    			vertical-align: baseline; */
 			}
-
-			.selectors {
-				
-			}
-
-			.header-elements {
-				line-height: 0px;
-			}
-
-			
-
-			
 
 			.panel {
-				height: 100%;
-
+				border: 2px solid yellow;
+				width: 25%;
 			}
 
 			.code-table {
 				width: 100%;
 				height: 100%;
-				text-align: left;
-				position: relative;
-
+				border: 1px solid black;
 			}
 
+			tr {
+				border: 2px solid blue;
+			}
 
-			textarea {
-				width: 100%;
-				height: 100%;
-				font-family: monospace;
-				background-color: #EEF0F2;
-				border-top: 2px solid #EEC643;
+			td {
+				border: 2px solid green;
 				
 			}
+
 			
 			textarea:focus {
     			outline: none;
 			}
 
 			.panel-header {
-				font-family: Avenir, sans-serif;
 				font-size: 16px;
-				margin-top: 32px;
 			}
 
 			#panel-out {
-				height: 100%;
 				border-top: 2px solid #EEC643;
 				border-left: none;
 				border-right: none;
 				border-bottom: none;
+			}
+
+			.pane {
+				border: 1px solid black;
 			}
 		</style>
