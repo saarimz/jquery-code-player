@@ -30,17 +30,19 @@
 			}
 
 			.selectors {
-				float: left;
 				border: 2px solid #EEC643;
 				border-radius: 6px;
-				height: 32px;
-				width: 80px;
-				margin: 8px 4px 0px 4px;
-				padding: 0px 20px;
+				margin: 0px;
+				padding: 0px;
 				background-color: #EEF0F2;
 				color: #141414;
 				font-family: Avenir, sans-serif;
 				font-weight: bold;
+				float: left;
+			}
+
+			.header-elements {
+				line-height: 0px;
 			}
 
 			.selectors:hover{
@@ -50,9 +52,7 @@
 				text-decoration: underline;
 			}
 
-			.header-elements {
-				line-height: 0px;
-			}
+			
 
 			.panel {
 				height: 100%;
