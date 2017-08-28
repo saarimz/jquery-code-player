@@ -1,5 +1,4 @@
 
-		<style>
 
 			body {
 				margin: 0px;
@@ -12,27 +11,30 @@
 			/*header styles*/
 
 			.header{
-				padding-bottom: 20px;
+				padding-bottom: 10px;
 				background-color: #141414;
 
 			}
 
 			#horizontal-list {
-				min-width: 696px;
+				
 				list-style: none;
 				padding-top: 20px;
 			}
 
 			#horizontal-list li {
-				border: 2px solid #EEC643;
-				border-radius: 6px;
-				margin: 10px;
-				padding: 10px 20px;
+				border: 0.25vw solid #EEC643;
+				border-radius: 0.6vw;
+				margin: 0.8vw;
+				padding: 0.8vw 1vw;
 				background-color: #EEF0F2;
 				color: #141414;
 				font-weight: bold;
+				font-size: 1em;
 				display: inline;
+
 			}
+
 
 			#horizontal-list li:hover {
 				background-color: #EEC643;
@@ -43,67 +45,73 @@
 
 			#wrapper {
 				margin: 0 auto;
-				display: inline-block;
-			}
-
-			/*code area styles*/
-
-			#content textarea  {
-
-				font-family: monospace;
-				background-color: #EEF0F2;
-				border-top: 2px solid #EEC643;
-				margin: 0 auto;
-				padding: 0 5px;
-				font-size: 100%;
-    			font: inherit;
-    			vertical-align: baseline; 
-				/*
-				margin: 0;
-    			padding: 0;
-    			border: 0;
-    			font-size: 100%;
-    			font: inherit;
-    			vertical-align: baseline; */
-			}
-
-			.panel {
-				border: 2px solid yellow;
-				width: 25%;
-			}
-
-			.code-table {
-				width: 100%;
-				height: 100%;
-				border: 1px solid black;
-			}
-
-			tr {
-				border: 2px solid blue;
-			}
-
-			td {
-				border: 2px solid green;
 				
 			}
 
-			
-			textarea:focus {
-    			outline: none;
+			.unselectable {
+  			   -moz-user-select: -moz-none;
+			   -khtml-user-select: none;
+			   -webkit-user-select: none;
+			   -o-user-select: none;
+			   user-select: none;
+			   }
+
+			/*code area styles*/
+
+			.code-area {
+    			display: table;
+    			width: 100%;
+    			margin-top: 0px;
+    			padding: 0 0 0 0; /*set left/right padding according to needs*/
+    			box-sizing: border-box;
+			}
+
+			.code-area-row {
+    			height: 100%;
+    			display: table-row;
 			}
 
 			.panel-header {
-				font-size: 16px;
+				font-size: 1.2em;
 			}
 
-			#panel-out {
-				border-top: 2px solid #EEC643;
+			.panel {
+				margin: 0;
+				border: none;
+				padding: 0.5vw 0.5vw;
+				outline: 0;
+				opacity: 1;
+				border: none;
+			}
+
+			textarea {
+				width: 100%;
+				height: 80vh;
+				background-color: #EEF0F2;
+				margin: 0 auto;
+				padding: 2%;
+				border: 0;
+				vertical-align: baseline; 
+				resize: vertical;
+				font-family: monospace;
+
+			}
+
+			textarea:focus {
+    			outline: none !important;
+    			border-top: 2px solid #EEC643;
+			}
+
+			iframe {
 				border-left: none;
+				border-top: 2px solid #A9A9A9;
 				border-right: none;
 				border-bottom: none;
+				width: 100%;
+				height: 80vh;
 			}
 
-			.pane {
-				border: 1px solid black;
+			/*easter egg*/
+			.surprise-gif img {
+				margin: 1vw auto;
 			}
-		</style>
