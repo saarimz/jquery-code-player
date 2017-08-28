@@ -1,0 +1,259 @@
+<html>
+	<head>
+		<title>Jquery UI</title>
+		
+		<link rel="stylesheet" href="./jquery-ui-1.12.1/jquery-ui.css"/>
+		<script
+		  src="https://code.jquery.com/jquery-3.2.1.js"
+		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		  crossorigin="anonymous"></script>
+		<script></script>
+		<script src="./jquery-ui-1.12.1/jquery-ui.js"></script>
+
+		<style>
+
+			body {
+				margin: 0px;
+				padding: 0px;
+			}
+
+			textarea,body {
+				margin: 0;
+    			padding: 0;
+    			border: 0;
+    			font-size: 100%;
+    			font: inherit;
+    			vertical-align: baseline;
+			}
+
+			.header{
+				border: 1px solid black;
+				width: 100%;
+				height: 50px;
+				text-align: center;
+				background-color: #141414;
+
+			}
+
+			#wrapper {
+				margin: 0 auto;
+				display: inline-block;
+			}
+
+			.selectors {
+				float: left;
+				border: 2px solid #EEC643;
+				border-radius: 6px;
+				height: 32px;
+				width: 80px;
+				margin: 8px 4px 0px 4px;
+				padding: 0px 20px;
+				background-color: #EEF0F2;
+				color: #141414;
+				font-family: Avenir, sans-serif;
+				font-weight: bold;
+			}
+
+			.selectors:hover{
+				background-color: #EEC643;
+				color: #141414;
+				border-color: #EEF0F2;
+				text-decoration: underline;
+			}
+
+			.header-elements {
+				line-height: 0px;
+			}
+
+			.panel {
+				height: 100%;
+
+			}
+
+			.code-table {
+				width: 100%;
+				height: 100%;
+				text-align: left;
+				position: relative;
+
+			}
+
+
+			textarea {
+				width: 100%;
+				height: 100%;
+				font-family: monospace;
+				background-color: #EEF0F2;
+				border-top: 2px solid #EEC643;
+				
+			}
+			
+			textarea:focus {
+    			outline: none;
+			}
+
+			.panel-header {
+				font-family: Avenir, sans-serif;
+				font-size: 16px;
+				margin-top: 32px;
+			}
+
+			#panel-out {
+				width: 100%;
+				height: 100%;
+				border-top: 2px solid #EEC643;
+				border-left: none;
+				border-right: none;
+				border-bottom: none;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<div class="header">
+			<div id="wrapper">
+				<div class="selectors" id="html">
+					<p class="header-elements">HTML</p>
+				</div>
+				<div class="selectors" id="css">
+					<p class="header-elements">CSS</p>
+				</div>
+				<div class="selectors" id="js">
+					<p class="header-elements">JS</p>
+				</div>
+				<div class="selectors" id="preview">
+					<p class="header-elements">Preview</p>
+				</div>				
+			</div>
+		</div>
+		<div class="code-area">
+			<table class="code-table">
+				<tr>
+					<td class="panel" id="html-column">
+						<div style="height: 100%">
+							<h3 class="panel-header">HTML</h3>
+							<textarea id="html-input" rows="100"></textarea> 
+						</div>
+					</td>
+					<td class="panel" id="css-column">
+						<div style="height: 100%">
+							<h3 class="panel-header">CSS</h3>
+							<textarea id="css-input"></textarea> 
+						</div>
+					</td>
+					<td class="panel" id="js-column">
+						<div style="height: 100%">
+							<h3 class="panel-header">JavaScript</h3>
+							<textarea id="js-input"></textarea> 
+						</div>
+					</td>
+					<td class="panel" id="preview-column">
+						<div style="height: 100%">
+							<h3 class="panel-header">Preview</h3>
+							<iframe id="panel-out"></iframe>
+								
+							</div> 
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<script>
+
+
+			$(document).ready(function(){
+
+				updateOutput();
+
+				var htmlView = true;
+				var cssView = true;
+				var jsView = true;
+				var previewView = true;
+
+				$("#html").click(function(){
+					if (htmlView) {
+						$("#html-column").hide();
+						$("#html").css({"opacity":0.7});
+						htmlView = false;
+					} else {
+						$("#html-column").show();
+						$("#html").css({"opacity":1});
+						htmlView = true;
+					}
+				});
+
+				$("#css").click(function(){
+					if (cssView) {
+						$("#css-column").hide();
+						$("#css").css({"opacity":0.7});
+						cssView = false;
+					} else {
+						$("#css-column").show();
+						$("#css").css({"opacity":1});
+						cssView = true;
+					}
+				});
+
+				$("#js").click(function(){
+					if (jsView) {
+						$("#js-column").hide();
+						$("#js").css({"opacity":0.7});
+						jsView = false;
+					} else {
+						$("#js-column").show();
+						$("#js").css({"opacity":1});
+						jsView = true;
+					}
+				});
+
+				function updateOutput() {
+					
+					$("#panel-out").contents().find("html").html(
+
+						'<html>' + 
+						  '<head>' + 
+						    '<style type="text/css">' + 
+						      $("#css-input").val() +
+						    '</style>' +
+						  '</head>' +
+						  '<body>' + $("#html-input").val() +
+						  '</body>' +
+						'</html>'
+
+						);
+
+					document.getElementById("panel-out").contentWindow.eval($("#js-input").val());
+
+				}
+
+				$("#preview").click(function(){
+					if (previewView) {
+						$("#preview-column").hide();
+						$("#preview").css({"opacity":0.7});
+						previewView = false;
+					} else {
+						$("#preview-column").show();
+						$("#preview").css({"opacity":1});
+						previewView = true;
+					}
+				});
+
+
+				$(".panel").width("25%");
+
+				var panels = ["#html-input","#css-input","#js-input"];
+
+				panels.map(function(panel){
+					$(panel).keyup(function(){
+						updateOutput();
+					})
+				});
+				
+
+
+			});
+			
+		</script>
+	</body>
+</html>
