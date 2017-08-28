@@ -1,0 +1,98 @@
+
+		<style>
+
+			body {
+				margin: 0px;
+				padding: 0px;
+			}
+
+			textarea,body {
+				margin: 0;
+    			padding: 0;
+    			border: 0;
+    			font-size: 100%;
+    			font: inherit;
+    			vertical-align: baseline;
+			}
+
+			.header{
+				border: 1px solid black;
+				width: 100%;
+				height: 50px;
+				text-align: center;
+				background-color: #141414;
+
+			}
+
+			#wrapper {
+				margin: 0 auto;
+				display: inline-block;
+			}
+
+			.selectors {
+				float: left;
+				border: 2px solid #EEC643;
+				border-radius: 6px;
+				height: 32px;
+				width: 80px;
+				margin: 8px 4px 0px 4px;
+				padding: 0px 20px;
+				background-color: #EEF0F2;
+				color: #141414;
+				font-family: Avenir, sans-serif;
+				font-weight: bold;
+			}
+
+			.selectors:hover{
+				background-color: #EEC643;
+				color: #141414;
+				border-color: #EEF0F2;
+				text-decoration: underline;
+			}
+
+			.header-elements {
+				line-height: 0px;
+			}
+
+			.panel {
+				height: 100%;
+
+			}
+
+			.code-table {
+				width: 100%;
+				height: 100%;
+				text-align: left;
+				position: relative;
+
+			}
+
+
+			textarea {
+				width: 100%;
+				height: 100%;
+				font-family: monospace;
+				background-color: #EEF0F2;
+				border-top: 2px solid #EEC643;
+				
+			}
+			
+			textarea:focus {
+    			outline: none;
+			}
+
+			.panel-header {
+				font-family: Avenir, sans-serif;
+				font-size: 16px;
+				margin-top: 32px;
+			}
+
+			#panel-out {
+				width: 100%;
+				height: 100%;
+				border-top: 2px solid #EEC643;
+				border-left: none;
+				border-right: none;
+				border-bottom: none;
+			}
+		</style>
