@@ -13,6 +13,8 @@
 			.header{
 				padding-bottom: 10px;
 				background-color: #141414;
+				background-size: cover;
+
 
 			}
 
@@ -44,6 +46,7 @@
 			}
 
 			#wrapper {
+				width: 100%;
 				margin: 0 auto;
 				
 			}

@@ -31,7 +31,7 @@
 			</div>
 		</div>
 	<!--code area-->
-		<div class="container-fluid code-area">
+		<div class="container code-area">
 		  <div class="row code-area-row">
 		  	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 panel" id="html-column">
 		  		<h3 class="panel-header">HTML</h3>
@@ -84,7 +84,12 @@
 				var cssView = true;
 				var jsView = true;
 				var previewView = true;
+				var windowWidth = $(window).width();
+				var windowHeight = $(window).height();
 
+				
+				
+				 
 				var views = [htmlView, cssView, jsView, previewView];
 
 				updateOutput();
@@ -157,7 +162,6 @@
 						return acc;
 					},0);
 
-					console.log(activeViews);
 					var panelWidth = (100.0 / activeViews).toFixed(2);
 
 					$(".panel").width((panelWidth - 1.25) + "vw");
